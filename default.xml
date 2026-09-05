@@ -18,49 +18,49 @@
         path="device/mediatek/sepolicy_vndr"
         name="android_device_mediatek_sepolicy_vndr"
         remote="pradeep"
-        revision="7d480d2" />
+        revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
 
     <project
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="18f8c3f" />
+        revision="18f8c3fb1b53bf3311c28e45ba6c4ff38d37d120" />
 
     <project
         path="frameworks/opt/telephony"
         name="android_frameworks_opt_telephony"
         remote="pradeep"
-        revision="80b5663" />
+        revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
 
     <project
         path="hardware/lineage/interfaces"
         name="android_hardware_lineage_interfaces"
         remote="pradeep"
-        revision="7210a24" />
+        revision="7210a243032830d1af22128c3ae1076ab8f1ff23" />
 
     <project
         path="hardware/mediatek"
         name="android_hardware_mediatek"
         remote="pradeep"
-        revision="39f7bb8" />
+        revision="39f7bb85f15a4bda44b0dcf0b08d969c145030f7" />
 
     <project
         path="hardware/oplus"
         name="android_hardware_oplus"
         remote="pradeep"
-        revision="228802a" />
+        revision="228802a00ed97f800cdf07e5c33cc90a3b76aa84" />
 
     <project
         path="kernel/realme/nashc"
         name="android_kernel_realme_nashc"
         remote="pradeep"
-        revision="97710ce" />
+        revision="97710ce3137087e2e88176b351d2db848b8179ec" />
 
     <project
         path="vendor/realme/nashc"
         name="android_vendor_realme_nashc"
         remote="pradeep"
-        revision="7330b95" />
+        revision="7330b9581397df643650bf985761a18e6d2a578d" />
 
     <!-- Old LiveDisplay SDM headers required by nashc -->
     <project
