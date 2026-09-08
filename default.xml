@@ -13,6 +13,13 @@
     <remove-project name="LineageOS/android_hardware_lineage_interfaces" optional="true" />
     <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
     <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
+    <remove-project name="LineageOS/android_system_netd" optional="true" />
+
+    <project
+        path="system/netd"
+        name="android_system_netd"
+        remote="pradeep"
+        revision="a0e97b7a3e5d32d2dd5c97aa0f1bb46767ac77b6" />
 
     <project
         path="device/mediatek/sepolicy_vndr"
