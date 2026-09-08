@@ -24,7 +24,7 @@
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="18f8c3fb1b53bf3311c28e45ba6c4ff38d37d120" />
+        revision="23c76dec1f30342a95aa3f6c163353b163cd4759" />
 
     <project
         path="frameworks/opt/telephony"
