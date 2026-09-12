@@ -14,6 +14,30 @@
     <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
     <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
     <remove-project name="LineageOS/android_system_netd" optional="true" />
+    <remove-project name="crdroidandroid/android_frameworks_base" optional="true" />
+    <remove-project name="crdroidandroid/android_frameworks_native" optional="true" />
+    <remove-project name="platform/external/selinux" optional="true" />
+
+    <project
+        path="frameworks/base"
+        name="android_frameworks_base"
+        remote="pradeep"
+        revision="f2cc62d8458c1c381f3d2d378c01c416002fb702"
+        groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+
+    <project
+        path="frameworks/native"
+        name="android_frameworks_native"
+        remote="pradeep"
+        revision="91876bf514a074ceb75ea7530aefbfa1b41c111d"
+        groups="pdk" />
+
+    <project
+        path="external/selinux"
+        name="android_external_selinux"
+        remote="pradeep"
+        revision="577dbf140d1702f80e7293b517610245f8e75fc5"
+        groups="pdk" />
 
     <project
         path="system/netd"
@@ -31,7 +55,7 @@
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="23c76dec1f30342a95aa3f6c163353b163cd4759" />
+        revision="2a1e22f4ec6b60c040f3271900bea39e3c0b5d71" />
 
     <project
         path="frameworks/opt/telephony"
@@ -61,7 +85,7 @@
         path="kernel/realme/nashc"
         name="android_kernel_realme_nashc"
         remote="pradeep"
-        revision="97710ce3137087e2e88176b351d2db848b8179ec" />
+        revision="53d8e8bf460a41e4d07a743ca0564d46ff6245b7" />
 
     <project
         path="vendor/realme/nashc"
