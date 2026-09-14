@@ -1,67 +1,91 @@
-# LineageOS 23.2 for Realme 8 (nashc)
+# crDroid Android 16 for Realme 8 (nashc)
 
 Device: Realme 8 4G  
-Codename: nashc  
+Codename: `nashc`  
 SoC: MediaTek MT6785  
 Android: 16  
-LineageOS: 23.2
+ROM: crDroid 12.x
 
-## Source sync
+This branch contains the local manifest used for the crDroid Android 16 nashc build tree.
 
-Initialize LineageOS:
+## Manifest branch
 
-```bash
-mkdir -p ~/android/lineage
-cd ~/android/lineage
+Use:
 
-repo init \
-  -u https://github.com/LineageOS/android.git \
-  -b lineage-23.2 \
-  --git-lfs
+```text
+crdroid-16-nashc
 ```
 
-Add nashc local manifest:
+The manifest keeps nashc-specific framework patches in dedicated crDroid branches while device-specific trees continue to use the `lineage-23.2-nashc` branches.
+
+### crDroid-side patch branches
+
+The following repositories track `crdroid-16-nashc`:
+
+- `frameworks/base`
+- `frameworks/native`
+- `external/selinux`
+- `system/netd`
+- `system/vold`
+
+These branches preserve the nashc Android 16 compatibility and device fixes on top of the crDroid source base.
+
+### Device-specific branches
+
+The following nashc/device repositories track `lineage-23.2-nashc`:
+
+- `device/realme/nashc`
+- `vendor/realme/nashc`
+- `device/mediatek/sepolicy_vndr`
+- `frameworks/opt/telephony`
+- `hardware/lineage/interfaces`
+- `hardware/mediatek`
+- `hardware/oplus`
+
+The kernel and legacy LiveDisplay dependency remain pinned to tested commits in `default.xml`.
+
+## Add the local manifest
+
+From an already initialized crDroid Android 16 source tree:
 
 ```bash
 mkdir -p .repo/local_manifests
 
 curl -L \
-  https://raw.githubusercontent.com/pradeepdhibar/android_nashc_manifest/lineage-23.2/default.xml \
-  -o .repo/local_manifests/nashc.xml
+  https://raw.githubusercontent.com/pradeepdhibar/android_nashc_manifest/crdroid-16-nashc/default.xml \
+  -o .repo/local_manifests/default.xml
 ```
 
-Sync sources:
+## Sync
+
+Normal sync:
 
 ```bash
-repo sync -c -j$(nproc) \
-  --force-sync \
+repo sync -c \
+  -j4 \
   --no-clone-bundle \
-  --no-tags
+  --no-tags \
+  --fail-fast
 ```
 
-## Build
+Do **not** use global `--force-sync` for routine updates. If repo reports a checkout/object-store migration conflict, inspect that project first and only use selective `--force-sync` after confirming the worktree is clean and its custom commits are safely pushed.
 
-```bash
-cd ~/android/lineage
-source build/envsetup.sh
+## Updating crDroid
 
-lunch lineage_nashc-bp4a-userdebug
+For a new crDroid update:
 
-mka bacon -j6
-```
+1. Sync/update the upstream crDroid source.
+2. Update the dedicated `crdroid-16-nashc` branches while preserving the nashc patches.
+3. Keep device/vendor changes on their `lineage-23.2-nashc` branches.
+4. Verify the resolved manifest and all custom heads before building.
+5. Build and test before moving any intentionally pinned dependency.
 
-ROM output:
+## Important nashc fixes currently preserved
 
-```text
-out/target/product/nashc/lineage-23.2-*-UNOFFICIAL-nashc.zip
-```
+The custom branches include device-specific Android 16 compatibility work such as legacy-kernel framework compatibility, SELinux compatibility, tethering/netd fixes, and other nashc-specific framework changes.
+
+Temporary A/B debug patches should not be committed to these permanent branches until they are confirmed necessary.
 
 ## Notes
 
-This source tree contains Android 16 compatibility changes for the legacy
-MediaTek/Realme nashc platform.
-
-The kernel contains additional BPF compatibility backports required for
-Android 16 userspace.
-
-This is an unofficial development build.
+This is an unofficial development setup for Realme 8 4G (`nashc`). The manifest is intended to make crDroid updates reproducible while keeping device patches separated from upstream source history.
