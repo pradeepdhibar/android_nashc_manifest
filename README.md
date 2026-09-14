@@ -84,7 +84,7 @@ For a new crDroid update:
 
 The custom branches include device-specific Android 16 compatibility work such as legacy-kernel framework compatibility, SELinux compatibility, tethering/netd fixes, and other nashc-specific framework changes.
 
-Temporary A/B debug patches should not be committed to these permanent branches until they are confirmed necessary.
+
 
 ## Notes
 
