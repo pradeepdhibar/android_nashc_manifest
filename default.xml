@@ -7,80 +7,99 @@
     <remote name="lineage"
             fetch="https://github.com/LineageOS" />
 
-    <!-- Replace stock/official trees with nashc Android 16 working trees -->
+    <!--
+        crDroid Android 16 / nashc tracking manifest.
 
+        Framework-side nashc patches live on crdroid-16-nashc.
+        Device-specific trees use lineage-23.2-nashc.
+        Kernel and legacy LiveDisplay stay pinned intentionally.
+    -->
+
+    <!-- Replace upstream projects with nashc forks. -->
     <remove-project name="LineageOS/android_frameworks_opt_telephony" optional="true" />
+    <remove-project name="crdroidandroid/android_frameworks_opt_telephony" optional="true" />
     <remove-project name="LineageOS/android_hardware_lineage_interfaces" optional="true" />
     <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
     <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
     <remove-project name="LineageOS/android_system_netd" optional="true" />
+    <remove-project name="LineageOS/android_system_vold" optional="true" />
+    <remove-project name="crdroidandroid/android_system_vold" optional="true" />
     <remove-project name="crdroidandroid/android_frameworks_base" optional="true" />
     <remove-project name="crdroidandroid/android_frameworks_native" optional="true" />
     <remove-project name="platform/external/selinux" optional="true" />
 
+    <!-- crDroid/framework-side nashc patch branches. -->
     <project
         path="frameworks/base"
         name="android_frameworks_base"
         remote="pradeep"
-        revision="cc4b20d50aa6ee4129863401aa283b5195084b07"
+        revision="crdroid-16-nashc"
         groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
     <project
         path="frameworks/native"
         name="android_frameworks_native"
         remote="pradeep"
-        revision="91876bf514a074ceb75ea7530aefbfa1b41c111d"
+        revision="crdroid-16-nashc"
         groups="pdk" />
 
     <project
         path="external/selinux"
         name="android_external_selinux"
         remote="pradeep"
-        revision="577dbf140d1702f80e7293b517610245f8e75fc5"
+        revision="crdroid-16-nashc"
         groups="pdk" />
 
     <project
         path="system/netd"
         name="android_system_netd"
         remote="pradeep"
-        revision="a0e97b7a3e5d32d2dd5c97aa0f1bb46767ac77b6" />
+        revision="crdroid-16-nashc" />
 
+    <project
+        path="system/vold"
+        name="android_system_vold"
+        remote="pradeep"
+        revision="crdroid-16-nashc" />
+
+    <!-- Device-specific nashc branches. -->
     <project
         path="device/mediatek/sepolicy_vndr"
         name="android_device_mediatek_sepolicy_vndr"
         remote="pradeep"
-        revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
+        revision="lineage-23.2-nashc" />
 
     <project
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="2a1e22f4ec6b60c040f3271900bea39e3c0b5d71" />
+        revision="lineage-23.2-nashc" />
 
     <project
         path="frameworks/opt/telephony"
         name="android_frameworks_opt_telephony"
         remote="pradeep"
-        revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
+        revision="lineage-23.2-nashc" />
 
     <project
         path="hardware/lineage/interfaces"
         name="android_hardware_lineage_interfaces"
         remote="pradeep"
-        revision="7210a243032830d1af22128c3ae1076ab8f1ff23" />
+        revision="lineage-23.2-nashc" />
 
     <project
         path="hardware/mediatek"
         name="android_hardware_mediatek"
         remote="pradeep"
-        revision="39f7bb85f15a4bda44b0dcf0b08d969c145030f7" />
+        revision="lineage-23.2-nashc" />
 
     <project
         path="hardware/oplus"
         name="android_hardware_oplus"
         remote="pradeep"
-        revision="228802a00ed97f800cdf07e5c33cc90a3b76aa84" />
+        revision="lineage-23.2-nashc" />
 
+    <!-- Kernel remains pinned until an explicit kernel update is tested. -->
     <project
         path="kernel/realme/nashc"
         name="android_kernel_realme_nashc"
@@ -91,9 +110,9 @@
         path="vendor/realme/nashc"
         name="android_vendor_realme_nashc"
         remote="pradeep"
-        revision="7330b9581397df643650bf985761a18e6d2a578d" />
+        revision="lineage-23.2-nashc" />
 
-    <!-- Old LiveDisplay SDM headers required by nashc -->
+    <!-- Old LiveDisplay SDM headers required by nashc. -->
     <project
         path="hardware/lineage/livedisplay"
         name="android_hardware_lineage_livedisplay"
