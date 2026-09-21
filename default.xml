@@ -106,6 +106,7 @@
         path="vendor/realme/nashc-opluscamera"
         name="android_vendor_realme_nashc-opluscamera"
         remote="pradeep"
-        revision="08a5b97cb5f1b33c3b01cfa4d3054ac1510c2223" />
+        revision="08a5b97cb5f1b33c3b01cfa4d3054ac1510c2223"
+        upstream="lineage-23.2-nashc" />
 
 </manifest>
