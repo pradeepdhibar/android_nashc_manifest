@@ -11,6 +11,8 @@
         crDroid Android 16 / nashc tracking manifest.
 
         Framework-side nashc patches live on crdroid-16-nashc.
+        frameworks/base stays at the tested pre-QS commit because the
+        expanded QS positioning fix now lives in the nashc device tree.
         Device-specific trees use lineage-23.2-nashc.
         Kernel and legacy LiveDisplay stay pinned intentionally.
     -->
@@ -33,7 +35,7 @@
         path="frameworks/base"
         name="android_frameworks_base"
         remote="pradeep"
-        revision="crdroid-16-nashc"
+        revision="f2cc62d8458c1c381f3d2d378c01c416002fb702"
         groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
     <project
