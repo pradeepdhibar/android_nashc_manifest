@@ -7,15 +7,7 @@
     <remote name="lineage"
             fetch="https://github.com/LineageOS" />
 
-    <!--
-        crDroid Android 16 / nashc tracking manifest.
-
-        Framework-side nashc patches live on crdroid-16-nashc.
-        frameworks/base stays at the tested pre-QS commit because the
-        expanded QS positioning fix now lives in the nashc device tree.
-        Device-specific trees use lineage-23.2-nashc.
-        Kernel and legacy LiveDisplay stay pinned intentionally.
-    -->
+    <!-- crDroid Android 16 local manifest for Realme 8 (nashc). -->
 
     <!-- Replace upstream projects with nashc forks. -->
     <remove-project name="LineageOS/android_frameworks_opt_telephony" optional="true" />
@@ -30,7 +22,7 @@
     <remove-project name="crdroidandroid/android_frameworks_native" optional="true" />
     <remove-project name="platform/external/selinux" optional="true" />
 
-    <!-- crDroid/framework-side nashc patch branches. -->
+    <!-- Framework and system sources. -->
     <project
         path="frameworks/base"
         name="android_frameworks_base"
@@ -64,7 +56,7 @@
         remote="pradeep"
         revision="crdroid-16-nashc" />
 
-    <!-- Device-specific nashc branches. -->
+    <!-- Device sources. -->
     <project
         path="device/mediatek/sepolicy_vndr"
         name="android_device_mediatek_sepolicy_vndr"
@@ -101,7 +93,7 @@
         remote="pradeep"
         revision="lineage-23.2-nashc" />
 
-    <!-- Kernel remains pinned until an explicit kernel update is tested. -->
+    <!-- Kernel. -->
     <project
         path="kernel/realme/nashc"
         name="android_kernel_realme_nashc"
@@ -114,7 +106,7 @@
         remote="pradeep"
         revision="lineage-23.2-nashc" />
 
-    <!-- Old LiveDisplay SDM headers required by nashc. -->
+    <!-- Legacy LiveDisplay dependency. -->
     <project
         path="hardware/lineage/livedisplay"
         name="android_hardware_lineage_livedisplay"
