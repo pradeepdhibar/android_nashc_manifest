@@ -9,27 +9,27 @@
 
     <!-- Replace stock/official trees with nashc Android 16 working trees -->
 
+    <remove-project name="LineageOS/android_frameworks_base" optional="true" />
+    <remove-project name="LineageOS/android_frameworks_native" optional="true" />
     <remove-project name="LineageOS/android_frameworks_opt_telephony" optional="true" />
     <remove-project name="LineageOS/android_hardware_lineage_interfaces" optional="true" />
     <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
     <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
     <remove-project name="LineageOS/android_system_netd" optional="true" />
-    <remove-project name="crdroidandroid/android_frameworks_base" optional="true" />
-    <remove-project name="crdroidandroid/android_frameworks_native" optional="true" />
     <remove-project name="platform/external/selinux" optional="true" />
 
     <project
         path="frameworks/base"
         name="android_frameworks_base"
         remote="pradeep"
-        revision="f2cc62d8458c1c381f3d2d378c01c416002fb702"
+        revision="31f0542775f92af3977170c28253bd9b0a275b3c"
         groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
     <project
         path="frameworks/native"
         name="android_frameworks_native"
         remote="pradeep"
-        revision="91876bf514a074ceb75ea7530aefbfa1b41c111d"
+        revision="e2ce5590fc530fc3706f88df6d915b0bb3f854fb"
         groups="pdk" />
 
     <project
