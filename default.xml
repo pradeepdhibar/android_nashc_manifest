@@ -22,7 +22,7 @@
         path="frameworks/base"
         name="android_frameworks_base"
         remote="pradeep"
-        revision="cc4b20d50aa6ee4129863401aa283b5195084b07"
+        revision="f2cc62d8458c1c381f3d2d378c01c416002fb702"
         groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
     <project
@@ -55,7 +55,7 @@
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="2a1e22f4ec6b60c040f3271900bea39e3c0b5d71" />
+        revision="10055746ef92fd3a0c6ca50c6326e60199131b5c" />
 
     <project
         path="frameworks/opt/telephony"
