@@ -22,13 +22,14 @@ The manifest keeps nashc-specific framework patches in dedicated crDroid branche
 
 The following repositories track `crdroid-16-nashc`:
 
-- `frameworks/base`
 - `frameworks/native`
 - `external/selinux`
 - `system/netd`
 - `system/vold`
 
 These branches preserve the nashc Android 16 compatibility and device fixes on top of the crDroid source base.
+
+`frameworks/base` is pinned to `f2cc62d8458c1c381f3d2d378c01c416002fb702`, the tested state before the old QS cutout patch. Expanded QS clock/date positioning is now supplied by `device/realme/nashc` through its build-time SystemUI overlay.
 
 ### Device-specific branches
 
