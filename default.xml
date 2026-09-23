@@ -85,7 +85,7 @@
         path="kernel/realme/nashc"
         name="android_kernel_realme_nashc"
         remote="pradeep"
-        revision="53d8e8bf460a41e4d07a743ca0564d46ff6245b7" />
+        revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
 
     <project
         path="vendor/realme/nashc"
