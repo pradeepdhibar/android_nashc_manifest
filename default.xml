@@ -25,7 +25,7 @@
         path="frameworks/base"
         name="android_frameworks_base"
         remote="pradeep"
-        revision="f2cc62d8458c1c381f3d2d378c01c416002fb702"
+        revision="178227378b581eca51aa0d27bc6ff03c6fb72e47"
         groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
     <project
