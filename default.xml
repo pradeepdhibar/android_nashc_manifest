@@ -16,8 +16,6 @@
     <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
     <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
     <remove-project name="LineageOS/android_system_netd" optional="true" />
-    <remove-project name="LineageOS/android_system_vold" optional="true" />
-    <remove-project name="crdroidandroid/android_system_vold" optional="true" />
     <remove-project name="crdroidandroid/android_frameworks_base" optional="true" />
     <remove-project name="crdroidandroid/android_frameworks_native" optional="true" />
     <remove-project name="platform/external/selinux" optional="true" />
@@ -47,12 +45,6 @@
     <project
         path="system/netd"
         name="android_system_netd"
-        remote="pradeep"
-        revision="crdroid-16-nashc" />
-
-    <project
-        path="system/vold"
-        name="android_system_vold"
         remote="pradeep"
         revision="crdroid-16-nashc" />
 
