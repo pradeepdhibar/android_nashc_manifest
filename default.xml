@@ -55,7 +55,7 @@
         path="device/realme/nashc"
         name="android_device_realme_nashc"
         remote="pradeep"
-        revision="ca208fea252a90dc219bd49a23e57305167e51c0" />
+        revision="5dc6909f6d296fcfd2e9eda97c6117220798c445" />
 
     <project
         path="frameworks/opt/telephony"
@@ -91,7 +91,7 @@
         path="vendor/realme/nashc"
         name="android_vendor_realme_nashc"
         remote="pradeep"
-        revision="7330b9581397df643650bf985761a18e6d2a578d" />
+        revision="a92605f1be92e6535d0421f40d4740da8e8e5219" />
 
     <!-- Old LiveDisplay SDM headers required by nashc -->
     <project
@@ -106,7 +106,7 @@
         path="vendor/realme/nashc-opluscamera"
         name="android_vendor_realme_nashc-opluscamera"
         remote="pradeep"
-        revision="08a5b97cb5f1b33c3b01cfa4d3054ac1510c2223"
+        revision="77ae46bce6a9f351af938c4586a9dc84021efe5c"
         upstream="lineage-23.2-nashc" />
 
 </manifest>
