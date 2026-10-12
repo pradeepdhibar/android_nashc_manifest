@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="nashc" fetch="https://github.com/pradeepdhibar" />
+    <remote name="lineage" fetch="https://github.com/LineageOS" />
+
+    <remove-project path="frameworks/opt/telephony" optional="true" />
+    <remove-project path="hardware/lineage/interfaces" optional="true" />
+    <remove-project path="hardware/mediatek" optional="true" />
+    <remove-project path="hardware/oplus" optional="true" />
+    <remove-project path="system/netd" optional="true" />
+    <remove-project path="external/selinux" optional="true" />
+
+    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="47bf9ddf700fa1e06f06b71ce074a54acb9cd9bf" />
+    <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="a92605f1be92e6535d0421f40d4740da8e8e5219" />
+    <project name="android_kernel_realme_nashc" path="kernel/realme/nashc" remote="nashc" revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
+
+    <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="nashc" revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
+    <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="nashc" revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
+    <project name="android_hardware_lineage_interfaces" path="hardware/lineage/interfaces" remote="nashc" revision="5ff3002b3ad6f100131cfd90f00dec357172cc5f" />
+    <project name="android_hardware_mediatek" path="hardware/mediatek" remote="nashc" revision="39f7bb85f15a4bda44b0dcf0b08d969c145030f7" />
+    <project name="android_hardware_oplus" path="hardware/oplus" remote="nashc" revision="228802a00ed97f800cdf07e5c33cc90a3b76aa84" />
+    <project name="android_system_netd" path="system/netd" remote="nashc" revision="a0e97b7a3e5d32d2dd5c97aa0f1bb46767ac77b6" />
+    <project name="android_external_selinux" path="external/selinux" remote="nashc" revision="577dbf140d1702f80e7293b517610245f8e75fc5" />
+
+    <project name="android_hardware_lineage_livedisplay" path="hardware/lineage/livedisplay" remote="lineage" revision="05bbbfd180bf8c02b6fb81a7e4b8057868f6e4ba" />
+
+
+</manifest>

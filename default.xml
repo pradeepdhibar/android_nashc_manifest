@@ -1,112 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <remote name="pradeep"
-            fetch="https://github.com/pradeepdhibar" />
+    <remote name="nashc" fetch="https://github.com/pradeepdhibar" />
+    <remote name="lineage" fetch="https://github.com/LineageOS" />
 
-    <remote name="lineage"
-            fetch="https://github.com/LineageOS" />
+    <remove-project path="frameworks/opt/telephony" optional="true" />
+    <remove-project path="hardware/lineage/interfaces" optional="true" />
+    <remove-project path="hardware/mediatek" optional="true" />
+    <remove-project path="hardware/oplus" optional="true" />
+    <remove-project path="system/netd" optional="true" />
+    <remove-project path="external/selinux" optional="true" />
 
-    <!-- Replace stock/official trees with nashc Android 16 working trees -->
+    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="47bf9ddf700fa1e06f06b71ce074a54acb9cd9bf" />
+    <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="e42de62b640e0fc848fe390ec846b36ad2f1af86" />
+    <project name="android_kernel_realme_nashc" path="kernel/realme/nashc" remote="nashc" revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
 
-    <remove-project name="LineageOS/android_frameworks_base" optional="true" />
-    <remove-project name="LineageOS/android_frameworks_native" optional="true" />
-    <remove-project name="LineageOS/android_frameworks_opt_telephony" optional="true" />
-    <remove-project name="LineageOS/android_hardware_lineage_interfaces" optional="true" />
-    <remove-project name="LineageOS/android_hardware_mediatek" optional="true" />
-    <remove-project name="LineageOS/android_hardware_oplus" optional="true" />
-    <remove-project name="LineageOS/android_system_netd" optional="true" />
-    <remove-project name="platform/external/selinux" optional="true" />
+    <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="nashc" revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
+    <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="nashc" revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
+    <project name="android_hardware_lineage_interfaces" path="hardware/lineage/interfaces" remote="nashc" revision="5ff3002b3ad6f100131cfd90f00dec357172cc5f" />
+    <project name="android_hardware_mediatek" path="hardware/mediatek" remote="nashc" revision="39f7bb85f15a4bda44b0dcf0b08d969c145030f7" />
+    <project name="android_hardware_oplus" path="hardware/oplus" remote="nashc" revision="8ec832b0d2c7afc7aee89971a5ba7f43761d0834" />
+    <project name="android_system_netd" path="system/netd" remote="nashc" revision="a0e97b7a3e5d32d2dd5c97aa0f1bb46767ac77b6" />
+    <project name="android_external_selinux" path="external/selinux" remote="nashc" revision="577dbf140d1702f80e7293b517610245f8e75fc5" />
 
-    <project
-        path="frameworks/base"
-        name="android_frameworks_base"
-        remote="pradeep"
-        revision="31f0542775f92af3977170c28253bd9b0a275b3c"
-        groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+    <project name="android_hardware_lineage_livedisplay" path="hardware/lineage/livedisplay" remote="lineage" revision="05bbbfd180bf8c02b6fb81a7e4b8057868f6e4ba" />
 
-    <project
-        path="frameworks/native"
-        name="android_frameworks_native"
-        remote="pradeep"
-        revision="e2ce5590fc530fc3706f88df6d915b0bb3f854fb"
-        groups="pdk" />
-
-    <project
-        path="external/selinux"
-        name="android_external_selinux"
-        remote="pradeep"
-        revision="577dbf140d1702f80e7293b517610245f8e75fc5"
-        groups="pdk" />
-
-    <project
-        path="system/netd"
-        name="android_system_netd"
-        remote="pradeep"
-        revision="a0e97b7a3e5d32d2dd5c97aa0f1bb46767ac77b6" />
-
-    <project
-        path="device/mediatek/sepolicy_vndr"
-        name="android_device_mediatek_sepolicy_vndr"
-        remote="pradeep"
-        revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
-
-    <project
-        path="device/realme/nashc"
-        name="android_device_realme_nashc"
-        remote="pradeep"
-        revision="5dc6909f6d296fcfd2e9eda97c6117220798c445" />
-
-    <project
-        path="frameworks/opt/telephony"
-        name="android_frameworks_opt_telephony"
-        remote="pradeep"
-        revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
-
-    <project
-        path="hardware/lineage/interfaces"
-        name="android_hardware_lineage_interfaces"
-        remote="pradeep"
-        revision="7210a243032830d1af22128c3ae1076ab8f1ff23" />
-
-    <project
-        path="hardware/mediatek"
-        name="android_hardware_mediatek"
-        remote="pradeep"
-        revision="39f7bb85f15a4bda44b0dcf0b08d969c145030f7" />
-
-    <project
-        path="hardware/oplus"
-        name="android_hardware_oplus"
-        remote="pradeep"
-        revision="228802a00ed97f800cdf07e5c33cc90a3b76aa84" />
-
-    <project
-        path="kernel/realme/nashc"
-        name="android_kernel_realme_nashc"
-        remote="pradeep"
-        revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
-
-    <project
-        path="vendor/realme/nashc"
-        name="android_vendor_realme_nashc"
-        remote="pradeep"
-        revision="a92605f1be92e6535d0421f40d4740da8e8e5219" />
-
-    <!-- Old LiveDisplay SDM headers required by nashc -->
-    <project
-        path="hardware/lineage/livedisplay"
-        name="android_hardware_lineage_livedisplay"
-        remote="lineage"
-        revision="05bbbfd180bf8c02b6fb81a7e4b8057868f6e4ba" />
-
-
-    <!-- Standalone OplusCamera port for nashc -->
-    <project
-        path="vendor/realme/nashc-opluscamera"
-        name="android_vendor_realme_nashc-opluscamera"
-        remote="pradeep"
-        revision="77ae46bce6a9f351af938c4586a9dc84021efe5c"
-        upstream="lineage-23.2-nashc" />
+    <project name="android_vendor_realme_nashc-opluscamera" path="vendor/realme/nashc-opluscamera" remote="nashc" revision="0846776a8860763accaf7d5adacac2c08e73d18d" />
 
 </manifest>
