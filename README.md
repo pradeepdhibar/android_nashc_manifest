@@ -2,7 +2,6 @@
 
 Base: AxionAOSP `lineage-23.2`
 
-- `default.xml` — `WITH_OPLUS_CAMERA=true`
-- `without-oplus.xml` — `WITH_OPLUS_CAMERA=false`
+Sync `default.xml` as `.repo/local_manifests/nashc.xml`.
 
-Use the selected file as `.repo/local_manifests/nashc.xml`.
+Set `WITH_OPLUS_CAMERA=true` or `WITH_OPLUS_CAMERA=false` when building.
