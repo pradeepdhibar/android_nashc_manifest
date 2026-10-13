@@ -11,8 +11,8 @@
     <remove-project path="system/netd" optional="true" />
     <remove-project path="external/selinux" optional="true" />
 
-    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="47bf9ddf700fa1e06f06b71ce074a54acb9cd9bf" />
-    <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="e42de62b640e0fc848fe390ec846b36ad2f1af86" />
+    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="887a6e76706f29d47cf63874aa6872e54e67f49b" />
+    <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="6cd5d6c016d71805e92c36a8e0f89cbad222d2a2" />
     <project name="android_kernel_realme_nashc" path="kernel/realme/nashc" remote="nashc" revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
 
     <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="nashc" revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
