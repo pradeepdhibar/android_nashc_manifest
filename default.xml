@@ -10,6 +10,19 @@
     <remove-project path="hardware/oplus" optional="true" />
     <remove-project path="system/netd" optional="true" />
     <remove-project path="external/selinux" optional="true" />
+    <remove-project path="build/make" optional="true" />
+    <remove-project path="external/erofs-utils" optional="true" />
+
+    <!-- nashc: pin tested EROFS build fixes, preserving Axion build/make linkfiles -->
+    <project name="android_build" path="build/make" remote="nashc" revision="838d49c28b4418b05dd2c51598a810cf095f8766" groups="pdk,sysui-studio">
+        <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+        <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+        <linkfile dest="build/core" src="core" />
+        <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+        <linkfile dest="build/target" src="target" />
+        <linkfile dest="build/tools" src="tools" />
+    </project>
+    <project name="android_external_erofs-utils" path="external/erofs-utils" remote="nashc" revision="1723e221f09a6b412daa80bf99e2f0db7d46dd86" groups="pdk" />
 
     <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="887a6e76706f29d47cf63874aa6872e54e67f49b" />
     <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="6cd5d6c016d71805e92c36a8e0f89cbad222d2a2" />
