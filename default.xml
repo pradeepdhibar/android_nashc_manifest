@@ -10,6 +10,10 @@
     <remove-project path="hardware/oplus" optional="true" />
     <remove-project path="system/netd" optional="true" />
     <remove-project path="external/selinux" optional="true" />
+    <!-- Tested nashc RAM-management forks -->
+    <remove-project path="system/memory/lmkd" optional="true" />
+    <remove-project path="device/axion/common" optional="true" />
+    <remove-project path="axion_sdk" optional="true" />
     <remove-project path="build/make" optional="true" />
     <remove-project path="external/erofs-utils" optional="true" />
 
@@ -24,9 +28,24 @@
     </project>
     <project name="android_external_erofs-utils" path="external/erofs-utils" remote="nashc" revision="1723e221f09a6b412daa80bf99e2f0db7d46dd86" groups="pdk" />
 
-    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="887a6e76706f29d47cf63874aa6872e54e67f49b" />
+    <project name="android_device_realme_nashc" path="device/realme/nashc" remote="nashc" revision="4cbe4c55b20003155324447c9364c43c565c7948">
+        <copyfile src="release-overrides/bionic/libc/bionic/custom_rom_hide.cpp"
+                  dest="bionic/libc/bionic/custom_rom_hide.cpp" />
+        <copyfile src="release-overrides/frameworks/base/packages/SystemUI/src/com/android/systemui/biometrics/MtkUdfpsScrimController.java"
+                  dest="frameworks/base/packages/SystemUI/src/com/android/systemui/biometrics/MtkUdfpsScrimController.java" />
+        <copyfile src="release-overrides/system/core/init/builtins.cpp"
+                  dest="system/core/init/builtins.cpp" />
+    </project>
     <project name="android_vendor_realme_nashc" path="vendor/realme/nashc" remote="nashc" revision="6cd5d6c016d71805e92c36a8e0f89cbad222d2a2" />
-    <project name="android_kernel_realme_nashc" path="kernel/realme/nashc" remote="nashc" revision="4fc865580cdadefc4b97bc7bb1ad96a503105477" />
+    <project name="android_kernel_realme_nashc" path="kernel/realme/nashc" remote="nashc" revision="7dae4d0942ccfd60f309b513ad381afcafa952c7" />
+
+    <!-- Match the upstream bases used by tested source snapshots -->
+    <extend-project name="android_bionic" path="bionic"
+                    revision="bbcf3d83b2d901641188b75c8dc44bb2f8ada7db" />
+    <extend-project name="android_frameworks_base" path="frameworks/base"
+                    revision="fc4504739c6366868f875a36d0d6da66b2d03365" />
+    <extend-project name="android_system_core" path="system/core"
+                    revision="ba33263951ef03025a6cdb3ca1cde6badcef8941" />
 
     <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="nashc" revision="7d480d2b805193237fd37722562b2cfc96e4183e" />
     <project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="nashc" revision="80b5663364c7c704e461829f91fcc34bef3a17f7" />
@@ -39,5 +58,21 @@
     <project name="android_hardware_lineage_livedisplay" path="hardware/lineage/livedisplay" remote="lineage" revision="05bbbfd180bf8c02b6fb81a7e4b8057868f6e4ba" />
 
     <project name="android_vendor_realme_nashc-opluscamera" path="vendor/realme/nashc-opluscamera" remote="nashc" revision="0846776a8860763accaf7d5adacac2c08e73d18d" />
+
+
+    <project name="android_system_memory_lmkd"
+             path="system/memory/lmkd"
+             remote="nashc"
+             revision="b2e5bec5e375fdc6f997d2edf39e2d35bc68250a" />
+
+    <project name="android_device_axion_common"
+             path="device/axion/common"
+             remote="nashc"
+             revision="57a0016472e41d8bbd8e48852082feea26d13314" />
+
+    <project name="android_axion_sdk"
+             path="axion_sdk"
+             remote="nashc"
+             revision="5326920c46721159f8c383390f1c233af2691e95" />
 
 </manifest>
